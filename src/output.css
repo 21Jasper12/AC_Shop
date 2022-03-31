@@ -829,6 +829,10 @@ header .icon {
   display: none;
 }
 
+.container-wrapper {
+  padding: 1rem;
+}
+
 @media screen and (min-width: 375px) {
   header {
     display: grid;
