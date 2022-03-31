@@ -754,7 +754,6 @@ header {
   height: 50px;
   width: 100%;
   position: relative;
-  border: 2px solid orange;
   /* 陰影 */
   -webkit-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
@@ -814,6 +813,7 @@ header .title-link {
   transform-origin: top;
 }
 header .title-link .title-item {
+  margin: 1.4rem 0;
   opacity: 0;
 }
 header .header-logo {
@@ -827,6 +827,38 @@ header .header-logo {
 header .icon {
   height: 30px;
   display: none;
+}
+
+@media screen and (min-width: 375px) {
+  header {
+    display: grid;
+    grid-template-columns: minmax(400px, 2fr) 2fr 1fr;
+    align-content: center;
+  }
+  header .title-link {
+    all: unset;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: space-around;
+  }
+  header .title-link .title-item {
+    opacity: 1;
+  }
+  header .header-logo {
+    grid-column: 2/3;
+  }
+  header .icon {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+  header .icon img {
+    width: 30px;
+  }
+  header .title-toggle-label {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
