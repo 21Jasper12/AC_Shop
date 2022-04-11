@@ -359,10 +359,22 @@ header{
     background: #ffffff;
     transition: transform 0.3s ease-out;
     transform-origin: top;
+    z-index: 999;
 
     .title-item {
+      position: relative;
       margin: 1.4rem 0;
       opacity: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 14.5px;
+        right: 14.5px;
+        bottom: 24px;
+        border-bottom: 2px solid $light-gray;
+      }
     }
   }
 
@@ -382,9 +394,75 @@ header{
 }
 
 .container-wrapper {
-  padding: 1rem;
-
+  width: 100%;
+  height: 120px;
+  margin-top: 16px;
   
+  .checked-title {
+    margin-left: 15px;
+  }
+
+  .checked-stepper {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+  }
+}
+
+.step {
+  position: relative;
+  flex: 1;
+  @include getStepNums(3);
+  .circle-container {
+    position: absolute;
+    left: 15px;
+    height: 32px;
+    width: 32px;
+    border: 1px solid #AFB1BD;
+    border-radius: 50%;
+    color: #AFB1BD;
+    margin: 0 auto;
+  }
+
+  .circle-container::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .label-container {
+    visibility: hidden;
+  }
+
+  // 設定checked 和 active 樣式
+  &.checked .circle-container::after {
+    content: "\2714";
+  }
+  
+  &.checked,
+  &.active {
+    .circle-container {
+      background-color: #2A2A2A;
+      color: #FFFFFF;
+    }
+  
+    .label-container {
+      color: $body-color;
+    }
+  }
+
+  // connect-line樣式設定
+  .connect-line {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: #2A2A2A;
+    position: absolute;
+    top: 15.5px;
+    right: calc(50%);
+    left: calc(-50%);
+  }
 }
 
 // 電腦版

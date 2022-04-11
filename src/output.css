@@ -811,10 +811,21 @@ header .title-link {
   background: #ffffff;
   transition: transform 0.3s ease-out;
   transform-origin: top;
+  z-index: 999;
 }
 header .title-link .title-item {
+  position: relative;
   margin: 1.4rem 0;
   opacity: 0;
+}
+header .title-link .title-item::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 14.5px;
+  right: 14.5px;
+  bottom: 24px;
+  border-bottom: 2px solid #a7aaaf;
 }
 header .header-logo {
   height: 30px;
@@ -830,7 +841,70 @@ header .icon {
 }
 
 .container-wrapper {
-  padding: 1rem;
+  width: 100%;
+  height: 120px;
+  margin-top: 16px;
+}
+.container-wrapper .checked-title {
+  margin-left: 15px;
+}
+.container-wrapper .checked-stepper {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+}
+
+.step {
+  position: relative;
+  flex: 1;
+}
+.step:nth-child(1) .circle-container::after {
+  content: "1";
+}
+.step:nth-child(2) .circle-container::after {
+  content: "2";
+}
+.step:nth-child(3) .circle-container::after {
+  content: "3";
+}
+.step .circle-container {
+  position: absolute;
+  left: 15px;
+  height: 32px;
+  width: 32px;
+  border: 1px solid #AFB1BD;
+  border-radius: 50%;
+  color: #AFB1BD;
+  margin: 0 auto;
+}
+.step .circle-container::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step .label-container {
+  visibility: hidden;
+}
+.step.checked .circle-container::after {
+  content: "✔";
+}
+.step.checked .circle-container, .step.active .circle-container {
+  background-color: #2A2A2A;
+  color: #FFFFFF;
+}
+.step.checked .label-container, .step.active .label-container {
+  color: #18253d;
+}
+.step .connect-line {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #2A2A2A;
+  position: absolute;
+  top: 15.5px;
+  right: calc(50%);
+  left: calc(-50%);
 }
 
 @media screen and (min-width: 375px) {
