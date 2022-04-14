@@ -654,6 +654,16 @@ input:invalid {
   padding-bottom: 2rem;
 }
 
+select, form .form-row input {
+  border: 1px solid #a7aaaf;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px;
+}
+select:hover, form .form-row input:hover, select:focus, form .form-row input:focus {
+  border-color: #4a4a4a;
+}
+
 html {
   font-size: 16px;
   height: 100%;
@@ -937,6 +947,68 @@ header .title-toggle:checked ~ .icon {
   visibility: hidden;
 }
 
+form .form-row > label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.select-wrapper {
+  position: relative;
+  z-index: 0;
+}
+.select-wrapper::after {
+  content: "";
+  border-style: solid;
+  border-width: 5px 4.5px 0px 4.5px;
+  border-color: #2A2A2A transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 18px;
+  z-index: -1;
+}
+
+select {
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+}
+select:invalid {
+  color: #747474;
+}
+
+.address-detail {
+  display: grid;
+  grid-template-columns: 133px 183px;
+  grid-gap: 30px;
+  grid-template-areas: "gender real-name" "mobile mobile" "email email" "county county" "address address";
+}
+.address-detail input {
+  width: 100%;
+}
+.address-detail .gender {
+  grid-area: gender;
+}
+.address-detail .gender select {
+  width: 100%;
+}
+.address-detail .real-name {
+  grid-area: real-name;
+}
+.address-detail .mobile {
+  grid-area: mobile;
+}
+.address-detail .email {
+  grid-area: email;
+}
+.address-detail .county {
+  grid-area: county;
+}
+.address-detail .address {
+  grid-area: address;
+}
+
 @media screen and (min-width: 375px) {
   header {
     display: grid;
@@ -999,6 +1071,12 @@ header .title-toggle:checked ~ .icon {
 
   .shopping-title {
     all: unset;
+  }
+
+  .address-detail {
+    grid-template-columns: repeat(6, 30px);
+    grid-gap: 20px;
+    grid-template-areas: "gender gender real-name real-name real-name real-name" "mobile mobile mobile email email email" "county county address address address address";
   }
 }
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="/src/output.css">
   <title>Document</title>
 </head>
+
 <body>
   <header>
     <input type="checkbox" class="title-toggle" id="title-toggle">
@@ -31,7 +33,7 @@
         聯絡我們
       </li>
     </ul>
-    
+
 
     <img src="/img/Logo@2x.png" class="header-logo" alt="Logo">
 
@@ -67,19 +69,55 @@
       </div>
 
       <div class="checked-form">
-        <div class="form-content">
-          <div class="part">
-            <h2>寄送地址</h2>
-              <div class="terms-panel scrollbar my-2">
-                <div class="terms-content">
+        <form id="a-form">
+          <div class="form-content">
+            <div class="part">
+              <h2>寄送地址</h2>
+              <div class="address-detail">
+                <div class="form-row gender"><label>稱謂</label>
+                  <div class="select-wrapper">
+                    <select name="a-type" id="a-type" required>
+                      <option value="man">先生</option>
+                      <option value="woman">小姐</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="form-row real-name">
+                  <label for="">姓名</label>
+                  <input id="bank-code" type="text" placeholder="請輸入姓名">
+                </div>
+                
+                <div class="form-row mobile">
+                  <label for="">電話</label>
+                  <input id="bank-code" type="text" placeholder="請輸入行動電話">
+                </div>
+                
+                <div class="form-row email">
+                  <label for="">Email</label>
+                  <input id="bank-code" type="text" placeholder="請輸入電子郵件">
+                </div>
+                
+                <div class="form-row county"><label>縣市</label>
+                  <div class="select-wrapper">
+                    <select name="a-type" id="a-type" required>
+                      <option value="" disabled selected>請選擇縣市</option>
+                      <option value="taipei">台北</option>
+                      <option value="taichung">台中</option>
+                      <option value="kaohsiung">高雄</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="form-row address">
+                  <label for="">地址</label>
+                  <input id="bank-code" type="text" placeholder="請輸入地址">
                 </div>
               </div>
-            <div class="form-row d-flex align-items-center">
-              <input id="terms-check" type="checkbox">
-              <label for="">我已詳細閱讀以上條款內容，並同意接受內容所有款項規定</label>
+
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
@@ -91,4 +129,5 @@
   </section>
 
 </body>
+
 </html>
