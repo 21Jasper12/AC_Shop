@@ -947,11 +947,25 @@ header .title-toggle:checked ~ .icon {
   visibility: hidden;
 }
 
+form .part-title {
+  margin-bottom: 24px;
+}
 form .form-row > label {
   display: block;
   margin-bottom: 6px;
   font-weight: 500;
 }
+form .form-row input[type=radio] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+form .form-row input[type=radio]:checked {
+  box-shadow: inset 0 0 0 6px #2A2A2A;
+}
+
 .select-wrapper {
   position: relative;
   z-index: 0;
@@ -1007,6 +1021,63 @@ select:invalid {
 }
 .address-detail .address {
   grid-area: address;
+}
+
+.shipping-method .form-row {
+  position: relative;
+  border: 1px solid #dfdfe4;
+  border-radius: 4px;
+  width: 346px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+.shipping-method .form-row input {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 306px;
+}
+.shipping-method .form-row input:checked ~ .tag-title::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -61px;
+  border: 1px solid #2A2A2A;
+  border-radius: 4px;
+  width: 344px;
+  height: 59px;
+}
+.shipping-method .form-row .tag-title {
+  position: absolute;
+  top: 11px;
+  left: 60px;
+  bottom: 29px;
+  right: 83px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.shipping-method .form-row .tag-description {
+  position: absolute;
+  top: 33px;
+  left: 60px;
+  bottom: 31px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.shipping-method .form-row .tag-costs {
+  position: absolute;
+  top: 13px;
+  left: 302px;
+  bottom: 11px;
+  right: 83px;
+  font-size: 12px;
+  font-weight: 400;
+  width: 30px;
+}
+.shipping-method .form-row .fast {
+  font-weight: 700;
 }
 
 @media screen and (min-width: 375px) {

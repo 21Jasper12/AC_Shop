@@ -72,7 +72,7 @@
         <form id="a-form">
           <div class="form-content">
             <div class="part">
-              <h2>寄送地址</h2>
+              <h2 class="part-title">寄送地址</h2>
               <div class="address-detail">
                 <div class="form-row gender"><label>稱謂</label>
                   <div class="select-wrapper">
@@ -115,6 +115,51 @@
                 </div>
               </div>
 
+            </div>
+
+            <div class="part">
+              <h2 class="part-title">運送方式</h2>
+              <div class="shipping-method">
+                <div class="form-row">
+                  <input name="ta-method" type="radio" value="free">
+                  <p class="tag-title">標準運送</p>
+                  <p class="tag-description">約3~7個工作天</p>
+                  <p class="tag-costs">免費</p>
+                </div>
+
+                <div class="form-row">
+                  <input name="ta-method" type="radio" value="cost">
+                  <p class="tag-title fast">DHL 貨運</p>
+                  <p class="tag-description">48小時內送達</p>
+                  <p class="tag-costs">$500</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="part">
+              <h2 class="part-title">付款資訊</h2>
+              <div class="payment-info">
+                <div class="form-row card-name">
+                  <label for="">持卡人姓名</label>
+                  <input id="bank-code" type="text" placeholder="John Doe">
+                </div>
+
+                <div class="form-row card-id">
+                  <label for="">卡號</label>
+                  <input id="bank-code" type="text" placeholder="1111 2222 3333 4444">
+                </div>
+
+                <div class="form-row card-date-line">
+                  <label for="">有效期限</label>
+                  <input id="bank-code" type="text" placeholder="MM/YY">
+                </div>
+
+                <div class="form-row card-cvc">
+                  <label for="">CVC/CCV</label>
+                  <input id="bank-code" type="text" placeholder="123">
+                </div>
+              </div>
             </div>
           </div>
         </form>
