@@ -44,12 +44,12 @@
     </div>
   </header>
 
+  <div class="checked-title">
+    <h2>結帳</h3>
+  </div>
 
   <section class="main">
     <div class="container-wrapper">
-      <div class="checked-title">
-        <h2>結帳</h3>
-      </div>
 
       <div class="checked-stepper">
         <div class="step active">
@@ -82,22 +82,22 @@
                     </select>
                   </div>
                 </div>
-                
+
                 <div class="form-row real-name">
                   <label for="">姓名</label>
                   <input id="bank-code" type="text" placeholder="請輸入姓名">
                 </div>
-                
+
                 <div class="form-row mobile">
                   <label for="">電話</label>
                   <input id="bank-code" type="text" placeholder="請輸入行動電話">
                 </div>
-                
+
                 <div class="form-row email">
                   <label for="">Email</label>
                   <input id="bank-code" type="text" placeholder="請輸入電子郵件">
                 </div>
-                
+
                 <div class="form-row county"><label>縣市</label>
                   <div class="select-wrapper">
                     <select name="a-type" id="a-type" required>
@@ -108,7 +108,7 @@
                     </select>
                   </div>
                 </div>
-                
+
                 <div class="form-row address">
                   <label for="">地址</label>
                   <input id="bank-code" type="text" placeholder="請輸入地址">
@@ -117,7 +117,7 @@
 
             </div>
 
-            <div class="part">
+            <div class="part d-none">
               <h2 class="part-title">運送方式</h2>
               <div class="shipping-method">
                 <div class="form-row">
@@ -137,7 +137,7 @@
             </div>
 
 
-            <div class="part">
+            <div class="part d-none">
               <h2 class="part-title">付款資訊</h2>
               <div class="payment-info">
                 <div class="form-row card-name">
@@ -167,8 +167,55 @@
     </div>
 
     <div class="shopping-wrapper">
-      <div class="shopping-title">
-        <h2>購物籃</h3>
+      <div class="shopping-container">
+        <div class="shopping-title">
+          <h3>購物籃</h3>
+        </div>
+        
+        <div class="shopping-content d-flex flex-column">
+          <ul class="shopping-list">
+            <li class="list-detail">
+              <img src="/img/commodity-1@2x.png" alt="commodity-1" class="shopping-img">
+              <h4 class="commodity-title">破壞補丁修身牛仔褲</h4>
+              <div class="shopping-btn">
+                <button class="reduce">-</button>
+                <span class="count">1</span>
+                <button class="increase">+</button>
+              </div>
+              <h5 class="price">$3,999</h5>
+            </li>
+        
+            <li class="list-detail">
+              <img src="/img/commodity-2@2x.png" alt="commodity-2" class="shopping-img">
+              <h4 class="commodity-title">刷色直筒牛仔褲</h4>
+              <div class="shopping-btn">
+                <button class="reduce">-</button>
+                <span class="count">1</span>
+                <button class="increase">+</button>
+              </div>
+              <h5 class="price">$1,299</h5>
+            </li>
+          </ul>
+        
+          <div class="transportation-fee">
+            <p class="fee-title">
+              運費
+              <span class="fee-price">免費</span>
+            </p>
+          </div>
+        
+          <div class="shopping-total">
+            <p class="total-title">
+              小計
+              <span class="total">$<span class="total-price">5298</span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="btn">
+        <button class="btn-previous d-none">← 上一步</button>
+        <button class="btn-next">下一步 →</button>
       </div>
     </div>
   </section>
