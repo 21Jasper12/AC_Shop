@@ -820,12 +820,12 @@ select {
 // 電腦版
 @media screen and (min-width: 375px) {
   body {
-    width: 1440px;
-    padding: 0 165px;
+    padding: 0px 50px;
   }
 
   header {
     display: grid;
+    width: 1000px;
     grid-template-columns: minmax(400px, 2fr) 2fr 1fr;
     align-content: center;
 
@@ -875,6 +875,27 @@ select {
     width: 540px;
     margin-top: 30px;
     margin-right: 130px;
+
+    // computer-btn
+    .btn {
+      height: 110px;
+      margin: 48px 0px 0px 15px;
+      padding-top: 24px;
+      border-top: 1px solid #dfdfe4;
+    
+      button {
+        font-size: 14px;
+      }
+
+      .btn-next {
+        width: 174px;
+        height: 46px;
+        background-color: #F67599;
+        color: white;
+        border-radius: 7px;
+        margin-left: 320px;
+      }
+    }
   }
 
   .shopping-wrapper {
@@ -948,6 +969,13 @@ select {
       }
     }
   }
+
+  // mobile-btn(mobile隱藏)
+  .mobile-btn {
+    display: none;
+  }
+
+  // 
 }
 
 

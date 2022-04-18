@@ -1199,12 +1199,12 @@ select:invalid {
 
 @media screen and (min-width: 375px) {
   body {
-    width: 1440px;
-    padding: 0 165px;
+    padding: 0px 50px;
   }
 
   header {
     display: grid;
+    width: 1000px;
     grid-template-columns: minmax(400px, 2fr) 2fr 1fr;
     align-content: center;
   }
@@ -1246,6 +1246,23 @@ select:invalid {
     width: 540px;
     margin-top: 30px;
     margin-right: 130px;
+  }
+  .container-wrapper .btn {
+    height: 110px;
+    margin: 48px 0px 0px 15px;
+    padding-top: 24px;
+    border-top: 1px solid #dfdfe4;
+  }
+  .container-wrapper .btn button {
+    font-size: 14px;
+  }
+  .container-wrapper .btn .btn-next {
+    width: 174px;
+    height: 46px;
+    background-color: #F67599;
+    color: white;
+    border-radius: 7px;
+    margin-left: 320px;
   }
 
   .shopping-wrapper {
@@ -1296,6 +1313,10 @@ select:invalid {
   }
   .payment-info .card-cvc input {
     width: 220px;
+  }
+
+  .mobile-btn {
+    display: none;
   }
 }
 
