@@ -882,6 +882,9 @@ header .title-toggle:checked ~ .icon {
   margin-top: 24px;
   display: flex;
 }
+.container-wrapper .btn {
+  display: none;
+}
 
 .step {
   position: relative;
@@ -1123,7 +1126,7 @@ select:invalid {
   font-size: 14px;
 }
 .shopping-wrapper .btn .btn-next {
-  width: 345px;
+  width: 150px;
   height: 46px;
   background-color: #F67599;
   color: white;
@@ -1252,6 +1255,7 @@ footer {
     margin-right: 130px;
   }
   .container-wrapper .btn {
+    display: block;
     height: 110px;
     margin: 48px 0px 0px 15px;
     padding-top: 24px;

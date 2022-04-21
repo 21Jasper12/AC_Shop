@@ -425,6 +425,10 @@ header{
     margin-top: 24px;
     display: flex;
   }
+
+  .btn {
+    display: none;
+  }
 }
 
 .step {
@@ -728,7 +732,7 @@ select {
     }
 
     .btn-next {
-      width: 345px;
+      width: 150px;
       height: 46px;
       background-color: #F67599;
       color: white;
@@ -880,6 +884,7 @@ footer {
 
     // computer-btn
     .btn {
+      display: block;
       height: 110px;
       margin: 48px 0px 0px 15px;
       padding-top: 24px;
