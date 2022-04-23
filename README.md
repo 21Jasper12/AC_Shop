@@ -14,9 +14,8 @@
 
 ## 開始使用
 ---
-1. 請先確認有安裝 node.js 與 npm
-2. 將專案 clone 到本地
-3. 以code方式執行inde.html來顯示網頁
+1. 將專案 clone 到本地
+2. 用code執行inde.html來顯示網頁
 ---
 ## 開發工具
 * Node.js 14.16.0
