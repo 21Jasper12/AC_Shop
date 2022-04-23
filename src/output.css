@@ -875,7 +875,7 @@ header .title-toggle:checked ~ .icon {
 
 .container-wrapper {
   width: 100%;
-  height: 600px;
+  height: 100%;
 }
 .container-wrapper .checked-stepper {
   width: 100%;
@@ -1117,6 +1117,7 @@ select:invalid {
   margin: 32px 0px 0px 15px;
 }
 .shopping-wrapper .btn {
+  display: flex;
   height: 110px;
   margin: 32px 15px 0px 0px;
   padding: 24px 0px 40px 0px;
@@ -1125,8 +1126,11 @@ select:invalid {
 .shopping-wrapper .btn button {
   font-size: 14px;
 }
+.shopping-wrapper .btn .btn-previous {
+  width: 80px;
+  margin-right: 110px;
+}
 .shopping-wrapper .btn .btn-next {
-  width: 150px;
   height: 46px;
   background-color: #F67599;
   color: white;
@@ -1206,12 +1210,13 @@ footer {
 
 @media screen and (min-width: 375px) {
   body {
+    width: 1400px;
     padding: 0 50px;
   }
 
   header {
     display: grid;
-    width: 1000px;
+    width: 100%;
     grid-template-columns: minmax(400px, 2fr) 2fr 1fr;
     align-content: center;
   }
@@ -1250,12 +1255,18 @@ footer {
   }
 
   .container-wrapper {
-    width: 540px;
+    width: 600px;
     margin-top: 30px;
-    margin-right: 130px;
+  }
+  .container-wrapper .checked-stepper {
+    width: 540px;
+  }
+  .container-wrapper .checked-form {
+    height: 310px;
   }
   .container-wrapper .btn {
-    display: block;
+    position: relative;
+    display: flex;
     height: 110px;
     margin: 48px 0px 0px 15px;
     padding-top: 24px;
@@ -1264,25 +1275,48 @@ footer {
   .container-wrapper .btn button {
     font-size: 14px;
   }
+  .container-wrapper .btn .btn-previous {
+    width: 100px;
+    height: 46px;
+  }
   .container-wrapper .btn .btn-next {
+    position: absolute;
+    left: 350px;
     width: 174px;
     height: 46px;
     background-color: #F67599;
     color: white;
     border-radius: 7px;
-    margin-left: 320px;
   }
 
   .shopping-wrapper {
-    width: 440px;
+    width: 450px;
     margin-top: 48px;
+    margin-left: 100px;
   }
   .shopping-wrapper .shopping-title {
     display: block;
     margin: 32px 24px 0 24px;
   }
   .shopping-wrapper .shopping-container {
+    width: 100%;
     height: 420px;
+  }
+  .shopping-wrapper .shopping-container .list-detail {
+    width: 100%;
+  }
+  .shopping-wrapper .shopping-container .list-detail .commodity-title,
+.shopping-wrapper .shopping-container .list-detail .shopping-btn {
+    left: 140px;
+    right: 0px;
+  }
+  .shopping-wrapper .shopping-container .list-detail .price {
+    top: 16px;
+    left: 360px;
+    right: 0px;
+  }
+  .shopping-wrapper .mobile-btn {
+    display: none;
   }
 
   .checked-stepper {
@@ -1297,10 +1331,6 @@ footer {
   }
   .step .connect-line {
     left: calc(-50% + 40px);
-  }
-
-  .shopping-title {
-    all: unset;
   }
 
   form .part-title {
@@ -1321,10 +1351,6 @@ footer {
   }
   .payment-info .card-cvc input {
     width: 220px;
-  }
-
-  .mobile-btn {
-    display: none;
   }
 
   footer {
