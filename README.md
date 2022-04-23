@@ -1,7 +1,7 @@
 # 餐廳清單
-![image](https://github.com/21Jasper12/Restaurant-List/blob/main/public/img/restaurant.jpg)
+![image](https://github.com/21Jasper12/AC_Shop/blob/main/img/computer-screen.png)
 
-![image](https://github.com/21Jasper12/Restaurant-List/blob/main/public/img/restaurant.jpg)
+![image](https://github.com/21Jasper12/AC_Shop/blob/main/img/mobile-screen.png)
 
 ## 介紹
 ---
